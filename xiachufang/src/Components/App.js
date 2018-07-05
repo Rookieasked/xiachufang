@@ -6,7 +6,7 @@ import { Button } from 'antd';					//引入antd
 import 'antd/dist/antd.css';					//引入antd样式
 import React from 'react';						//引入react
 import ReactDOM from 'react-dom';				//引入react-dom
-import {Route,Link,NavLink,Switch}				//需要什么引什么
+// import {Route,Link,NavLink,Switch}				//需要什么引什么
 
 class App extends Component {
 	constructor(props){
