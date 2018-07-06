@@ -1,0 +1,104 @@
+
+body,ul,li,dl,dt,dd,p,ol,h1,h2,h3,h4,h5,h6,form,img,table,fieldset,legend{margin:0; padding:0;}
+ul,li,ol{list-style:none;}
+img,fieldset{border:0; }
+img{display:block;}
+a{text-decoration:none; color:#333;}
+h1,h2,h3,h4,h5,h6{font-weight:100;}
+body{ font-family:"微软雅黑";}
+input,a{outline:none;}
+
+#detail{
+    width: 980px;
+    margin: 0 auto;
+}
+
+#detail .red{
+    font-size: 18px;
+    color: #dd3915;
+}
+
+#detail .red:hover{
+    background: #dd3915;
+    color: #fff;
+}
+#detail h1{
+    margin-bottom: 16px;
+    font-size: 34px;
+    font-weight: 900;
+}
+#detail .img-row{
+    width: 660px;
+    height: 420px;
+    overflow: hidden;
+    vertical-align: center;
+}
+#detail .img-row img{
+    width: 660px;
+    margin-top: -100px;
+}
+#detail .row{
+    height: 80px;
+    width: 680px;
+    line-height: 80px;
+    display: block;
+    border-bottom: 1px solid #e3e3e3;
+}
+#detail .row p{
+    color: #999;
+    font-size: 16px;
+    margin-right: 10px;
+    float: left;
+    margin-bottom: 0;
+}
+#detail .row span{
+    color: #dd3915;
+    font-size: 20px;
+    padding: 0 5px;
+}
+#detail .row button{
+    float: right;
+    width: 140px;
+    height: 50px;
+    background: #dd3915;
+    color: #fff;
+    font-size: 22px;
+    border: 0;
+    line-height: 50px;
+    margin-top: 10px;
+}
+#detail .user-row{
+    padding: 15px 0;
+    display: block;
+    height: 90px;
+}
+#detail .user-row img{
+    border-radius: 50%;
+    float: left;
+}
+#detail .user-row p{
+    line-height: 60px;
+    font-size: 20px;
+    margin-left: 10px;
+    float: left;
+    margin-bottom: 0;
+}
+#detail .yellow{
+    color: rgb(192, 174, 125);
+    font-size: 24px;
+    font-weight: 700;
+}
+#detail h2{
+    text-align: left;
+}
+#detail .yongliao{
+    margin: 20px 0;
+}
+#detail .yongliao li{
+    height: 40px;
+    line-height: 40px;
+    font-size: 19px;
+    padding: 0 5px;
+    border-bottom: 1px solid #e3e3e3;
+    width: 660px;
+}
