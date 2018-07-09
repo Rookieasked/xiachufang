@@ -83,15 +83,6 @@ class Index extends Component {
 				//				})
 			}
 		});
-		$.ajax({
-			type: "get",
-			url: "http//www.xiachufang.com/index",
-			//			url:"http://10.8.161.38:8000/showDetail",
-			dataType: 'json',
-			success: function(data) {
-				_this.setState({ summerfood: data.summerfoods })
-			}
-		});
 		var chefElement = {
 			minSpeed: 5, //每次移动的距离
 			stopTime: 5000, //动画停留的时间，毫秒为单位 包含移动所花费的时间
