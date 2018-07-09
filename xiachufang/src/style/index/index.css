@@ -122,7 +122,10 @@
 	display: flex;
 	flex-wrap: wrap;
 }
-
+.IN-lei:hover,.IN-leiinfo span:hover{
+	color: red;
+	cursor:pointer;
+}
 .IN-leiinfo span {
 	width: 25%;
 }

@@ -43,7 +43,7 @@ class IndexInside extends Component {
 				{
 				this.state.data.slice(0,5).map(function(item,i){
 					return (<div className="IN-Inside-box" key={i} onClick={athis.bannerroute.bind(athis,item._id)}>
-						<div className="IN-Inside-img"><img src={item.imgSrc}/></div>
+						<div className="IN-Inside-img"><img src={item.imgSrc} title={item.tit}/></div>
 						<div className="IN-Inside-con">{item.tit}</div>
 					</div>)})
 				}

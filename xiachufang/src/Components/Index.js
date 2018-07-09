@@ -186,6 +186,14 @@ class Index extends Component {
 //		this.props.history.push("/detail/"+a)
 		window.location.href="/detail/"+a
 	}
+	register(){
+//		this.props.history.push("/register")
+		window.location.href="/register"
+	}
+	login(){
+		this.props.history.push("/login")
+	}
+		
 
 
 	render() {
@@ -388,7 +396,7 @@ class Index extends Component {
 							this.state.data.slice(0,5).map(function(item,i){
 							return (
 								<div key={i} onClick={athis.bannerroute.bind(athis,item._id)}>
-									<img src={item.imgSrc}/>
+									<img src={item.imgSrc} title={item.tit}/>
 									<div className="IN-banner-con">
 										<span>{item.tit}</span>
 										<em> {item.message[0].good} 人做过这道菜	by	{item.user}</em>
@@ -413,7 +421,7 @@ class Index extends Component {
 					            	this.state.data.slice(0,3).map(function(item,i){
 					            		return(
 					            			<dl key={i} onClick={athis.bannerroute.bind(athis,item._id)}>
-				            			<dt><img src={item.imgSrc} /></dt>
+				            			<dt><img src={item.imgSrc} title={item.tit} /></dt>
 				            			<dd>{item.tit}</dd>
 				            		</dl>
 					            		)
@@ -425,7 +433,7 @@ class Index extends Component {
 					            	this.state.data.slice(4,7).map(function(item,i){
 					            		return(
 					            			<dl key={i} onClick={athis.bannerroute.bind(athis,item._id)}>
-				            			<dt><img src={item.imgSrc} /></dt>
+				            			<dt><img src={item.imgSrc}  title={item.tit}/></dt>
 				            			<dd>{item.tit}</dd>
 				            		</dl>
 					            		)
@@ -437,7 +445,7 @@ class Index extends Component {
 					            	this.state.data.slice(8,11).map(function(item,i){
 					            		return(
 					            			<dl key={i} onClick={athis.bannerroute.bind(athis,item._id)}>
-				            			<dt><img src={item.imgSrc} /></dt>
+				            			<dt><img src={item.imgSrc}  title={item.tit}/></dt>
 				            			<dd>{item.tit}</dd>
 				            		</dl>
 					            		)
@@ -457,7 +465,7 @@ class Index extends Component {
 						this.state.data.slice(0,12).map(function(item,i){
 						return (<div key={i} className="IN-hot" onClick={athis.bannerroute.bind(athis,item._id)}>
 								<div className="IN-hot-img">
-									<img src={item.imgSrc} alt="待加载"/>
+									<img src={item.imgSrc} title={item.tit} alt="待加载"/>
 								</div>
 								<div className="IN-hot-name">
 									{item.tit}
@@ -478,7 +486,7 @@ class Index extends Component {
 							this.state.data.slice(0,12).map(function(item,i){
 								return (
 									<div key={i}  className="IN-summerfoods" onClick={athis.bannerroute.bind(athis,item._id)}>
-										<img src={item.imgSrc} alt="待加载"/>
+										<img src={item.imgSrc} alt="待加载" title={item.tit}/>
 										<span>{item.tit}</span>
 									</div>
 								)}
@@ -495,7 +503,7 @@ class Index extends Component {
 							<em className="tubiao">&#xe605;  </em><span>微博登录</span>
 						</div>
 						<div id="IN-tel-login">
-							<em>手机/邮箱登录</em><i>|</i><span>注册</span>
+							<em onClick={this.login.bind(this)}>手机/邮箱登录</em><i>|</i><span onClick={this.register.bind(this)}>注册</span>
 						</div>
 						<div id="IN-login-jubao">
 							<span>网上不良信息举报专区</span>
