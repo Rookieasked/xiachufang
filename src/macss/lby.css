@@ -11,7 +11,7 @@ body{
 }
 .lby-con{
 	width: 1000px;
-	margin: 30px auto 0;
+	margin: 100px auto 0;
 }
 li{
 	list-style: none;
@@ -87,7 +87,7 @@ figure img{
 	font-weight: 900;
 	line-height: 1.4;
 	cursor: pointer;
-	
+	color: #222222;
 }
 .lby-cm>span:nth-child(1):hover{
 	color: #dd3915;

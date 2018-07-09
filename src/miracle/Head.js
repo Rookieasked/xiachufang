@@ -1,8 +1,9 @@
-import React, { Component } from 'react';		//引入React.Component
-import  $ from  'jquery'						//引入jquery
-import ReactDOM from 'react-dom';               //引入react-dom
+import React, { Component } from 'react';
+import {BrowserRouter as Router,Route,Link,Redirect} from 'react-router-dom';
+import  $ from  'jquery'						
+import ReactDOM from 'react-dom';               
 import "../macss/Head.css"
-import {Link} from 'react-router'
+
 
 
 class Head extends Component {
@@ -12,14 +13,15 @@ class Head extends Component {
 	tap(){
 		this.props.history.push('/fenleiye')
 	}
+
   render() {
     return (
       <div>
        		<div className='tou-wrap'>
        			<div className='tou'>
-       				<div className='tou-logo'>
+       				<Link to="/head"><div className='tou-logo'>
 
-       				</div>
+       				</div></Link>
        				<div className='tou-search'>
        					<input type="text" placeholder="搜索菜谱、食材"/>
        					<button>搜菜谱</button>

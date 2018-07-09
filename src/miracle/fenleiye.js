@@ -18,6 +18,7 @@ class Fenlei extends Component{
 	render(){
 		return(
 			<div>
+			<Head/>
 				<div className="fenlei-wrap">
 					<h1>分类浏览</h1>
 					<div className="fenlei-con">

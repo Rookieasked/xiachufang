@@ -7,7 +7,7 @@ import {BrowserRouter as Router,Route,Link,Redirect} from 'react-router-dom';
 import 'antd/dist/antd.css';					//引入antd样式
 import "../macss/lby.css"
 import ReactDOM from 'react-dom';               //引入react-dom
-//import {Link} from 'react-router'
+import Head from './Head';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 const { SubMenu } = Menu;
 const { Content, Sider } = Layout;
@@ -26,6 +26,7 @@ class Liebiaoye extends Component {
   render() {
     return (
       <div>
+      <Head/>
       	<div className="lby-con">
        		 <Layout>
 			    <Content style={{ padding: '',background: '#fff' }}>
@@ -104,6 +105,7 @@ class Liebiaoye extends Component {
 						  <img src={item.imgSrc} alt=""/>
 						  <figcaption className="mid-fig">
 						  	<p className="lby-cm">
+						  	
 						  		<span>{item.tit}</span>
 						  		<span>步骤图</span>
 						  	</p>
@@ -196,13 +198,7 @@ class Liebiaoye extends Component {
 		_this.setState({strtit:_this.props.location.query.id})
 	}
   	
-  	componentWillReceiveProps(a){
-		console.log(a)
-		
-		var _this=this;
-		
-		
-	}
+
   	
   	componentDidMount(){
 		var _this=this;
