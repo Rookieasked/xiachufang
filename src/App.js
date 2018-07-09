@@ -12,10 +12,10 @@ class App extends Component {
       	<Router>
       		<div>
       				<Switch>
-      					<Route path="/head"  component={Head}></Route>
+      					
 	      				<Route path="/fenleiye"  component={Fenlei}></Route>
 	      				<Route path="/liebiaoye" component={Liebiaoye}></Route>
-	      				<Redirect to='/head'/>
+	      				
       				</Switch>
       		</div>
       	</Router>
