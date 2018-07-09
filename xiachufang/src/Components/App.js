@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'	//引入bootstrap样式
 import { Button } from 'antd';					//引入antd
 import 'antd/dist/antd.css';					//引入antd样式
 import Detail from './detail';
-// import React from 'react';						//引入react
+import Footer from './footer'
 import ReactDOM from 'react-dom';				//引入react-dom
-// import {Route,Link,NavLink,Switch}				//需要什么引什么
+import {BrowserRouter as Router,Route,Link,Redirect} from 'react-router-dom';				//需要什么引什么
 
 class App extends Component {
 	constructor(props){
@@ -16,7 +16,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <Detail/>
+          <Router>
+              <Route path="/detail/:id" component={Detail}/>
+          </Router>
+          <Footer/>
       </div>
     );
     

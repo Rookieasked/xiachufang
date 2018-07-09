@@ -1,10 +1,11 @@
 import React from 'react'
 import $ from 'jquery'
-import { Layout,Breadcrumb,Avatar,Icon } from 'antd';
+import { Layout,Breadcrumb,Avatar,Icon,Input } from 'antd';
 import '../style/detail.css'
-import Footer from './footer'
-const {  Sider, Content } = Layout;
+import Store from "./Store";
 
+const {  Sider, Content } = Layout;
+const { TextArea } = Input;
 
 class Detail extends React.Component{
     constructor(props){
@@ -14,7 +15,8 @@ class Detail extends React.Component{
             obj:{},
             foods:[],
             step:[],
-            message:[]
+            message:[],
+            user:Store.getState()
         }
     }
 
@@ -28,6 +30,31 @@ class Detail extends React.Component{
             },
             success:function (data) {
 
+            }
+        })
+    }
+
+    message(){
+        var _this = this;
+        var message = this.state.message;
+        var oDate = new Date();
+        var year = oDate.getFullYear(),
+            month = oDate.getMonth()+1,
+            day = oDate.getDate();
+        var obj={
+            con:_this.refs.mes.value,
+            user:_this.state.user.username,
+            userImg:'',
+            good:0,
+            date:year+month+day
+        }
+        message.push(obj)
+        $.ajax({
+            type:"post",
+            url:"'http://10.8.161.38:8000/message",
+            data:{
+                id:_this.props.match.params.id,
+                message:message
             }
         })
     }
@@ -69,7 +96,7 @@ class Detail extends React.Component{
                             <div>
                                 {
                                     this.state.step.map(function (item,i) {
-                                        return(<div className="step"><span className="yellow">{i}</span>{item}</div>)
+                                        return(<div className="step" key={i}><span className="yellow">{i}</span>{item}</div>)
                                     })
                                 }
                             </div>
@@ -100,11 +127,13 @@ class Detail extends React.Component{
                 </div>
                 <div className="message-wrap">
                     <h2 className="yellow">{this.state.obj.tit}的评论</h2>
+                    <TextArea rows={4} ref="mes"/>
+                    <button className="pinglun" onClick={this.message.bind(this)}>评论</button>
                     <div>
                         {
-                            this.state.message.map(function (item) {
+                            this.state.message.map(function (item,i) {
                                 return(
-                                    <div className="message">
+                                    <div className="message" key={i}>
                                         <Avatar size="default" icon="user" src={item.userImg} style={{margin:"5px 10px",float:"left"}}/>
                                         <div>
                                             <p><a href="">{item.user}</a><span>{item.date}</span></p>
@@ -120,12 +149,10 @@ class Detail extends React.Component{
                         }
                     </div>
                 </div>
-                <Footer />
             </div>
         )
     }
-
-    componentDidMount(){
+    componentWillMount(){
         var _this=this;
         $.ajax({
             type:'get',
@@ -136,10 +163,20 @@ class Detail extends React.Component{
                 for(var i = 0;i<4;i++){
                     arr.push(data[i]);
                 }
-                _this.setState({obj:data[2],foods:data[2].foods,step:data[2].step,message:data[2].message,tuijian:arr});
-                _this.state.obj.foods.map(function (item) {
-                    console.log(item)
-                })
+                _this.setState({tuijian:arr});
+            }
+        })
+    }
+    componentDidMount(){
+        var _this=this;
+        var id = this.props.match.params.id;
+        $.ajax({
+            type:'get',
+            url:'http://10.8.161.38:8000/showDetail',
+            async:true,
+            data:{id:id},
+            success:function (data) {
+                _this.setState({obj:data,foods:data.foods,step:data.step,message:data.message});
             }
         })
     }
