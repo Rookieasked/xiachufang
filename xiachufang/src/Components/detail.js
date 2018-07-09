@@ -2,7 +2,9 @@ import React from 'react'
 import $ from 'jquery'
 import { Layout,Breadcrumb,Avatar,Icon,Input } from 'antd';
 import '../style/detail.css'
-import Store from "./Store";
+import IndexInside from './IndexInside'
+import BackTop from './BackTop'
+// import Store from "./Store";
 
 const {  Sider, Content } = Layout;
 const { TextArea } = Input;
@@ -16,7 +18,7 @@ class Detail extends React.Component{
             foods:[],
             step:[],
             message:[],
-            user:Store.getState()
+            // user:Store.getState()
         }
     }
 
@@ -34,39 +36,40 @@ class Detail extends React.Component{
         })
     }
 
-    message(){
-        var _this = this;
-        var message = this.state.message;
-        var oDate = new Date();
-        var year = oDate.getFullYear(),
-            month = oDate.getMonth()+1,
-            day = oDate.getDate();
-        var obj={
-            con:_this.refs.mes.value,
-            user:_this.state.user.username,
-            userImg:'',
-            good:0,
-            date:year+month+day
-        }
-        message.push(obj)
-        $.ajax({
-            type:"post",
-            url:"'http://10.8.161.38:8000/message",
-            data:{
-                id:_this.props.match.params.id,
-                message:message
-            }
-        })
-    }
+    // message(){
+    //     var _this = this;
+    //     var message = this.state.message;
+    //     var oDate = new Date();
+    //     var year = oDate.getFullYear(),
+    //         month = oDate.getMonth()+1,
+    //         day = oDate.getDate();
+    //     var obj={
+    //         con:_this.refs.mes.value,
+    //         user:_this.state.user.username,
+    //         userImg:'',
+    //         good:0,
+    //         date:year+month+day
+    //     }
+    //     message.push(obj)
+    //     $.ajax({
+    //         type:"post",
+    //         url:"'http://10.8.161.38:8000/message",
+    //         data:{
+    //             id:_this.props.match.params.id,
+    //             message:message
+    //         }
+    //     })
+    // }
 
     render(){
         return(
             <div id='detail'>
+                <BackTop/>
                 <Layout style={{ width: "980px",margin: "0 auto"}}>
                     <Layout>
                         <Content style={{background:'#fff',overflowX:'visible'}}>
                             <Breadcrumb separator=">">
-                                <Breadcrumb.Item className="red" href="">首页</Breadcrumb.Item>
+                                <Breadcrumb.Item className="red" href="/index">首页</Breadcrumb.Item>
                                 <Breadcrumb.Item className="red" href="">馒头</Breadcrumb.Item>
                                 <Breadcrumb.Item href="">{this.state.obj.tit}</Breadcrumb.Item>
                             </Breadcrumb>
@@ -102,7 +105,9 @@ class Detail extends React.Component{
                             </div>
 
                         </Content>
-                        <Sider style={{background:'#fff'}}>Sider</Sider>
+                        <Sider style={{background:'#fff'}}>
+                            <IndexInside/>
+                        </Sider>
                     </Layout>
                 </Layout>
                 <div className="tuijian-wrap">
@@ -128,7 +133,7 @@ class Detail extends React.Component{
                 <div className="message-wrap">
                     <h2 className="yellow">{this.state.obj.tit}的评论</h2>
                     <TextArea rows={4} ref="mes"/>
-                    <button className="pinglun" onClick={this.message.bind(this)}>评论</button>
+                    {/*<button className="pinglun" onClick={this.message.bind(this)}>评论</button>*/}
                     <div>
                         {
                             this.state.message.map(function (item,i) {
