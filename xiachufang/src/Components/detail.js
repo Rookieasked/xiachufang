@@ -1,6 +1,6 @@
 import React from 'react'
 import $ from 'jquery'
-import { Layout,Breadcrumb,Avatar,Icon,Input } from 'antd';
+import { Layout,Breadcrumb,Avatar,Icon,Input,message, Button } from 'antd';
 import '../style/detail.css'
 import IndexInside from './IndexInside'
 import BackTop from './BackTop'
@@ -8,6 +8,9 @@ import BackTop from './BackTop'
 
 const {  Sider, Content } = Layout;
 const { TextArea } = Input;
+const success = () => {
+    message.success('收藏成功！');
+};
 
 class Detail extends React.Component{
     constructor(props){
@@ -23,15 +26,19 @@ class Detail extends React.Component{
     }
 
     collection(id){
+        var collection = this.user.collection;
+        collection.push(id);
         $.ajax({
             type:'post',
-            url:'http://10.8.161.38:8000/showDetail',
+            url:'http://10.8.161.38:8000/collection',
             data:{
                 username:'gzj',
-                collection:[]
+                collection:collection
             },
             success:function (data) {
-
+                if (data==1){
+                    success();
+                }
             }
         })
     }
