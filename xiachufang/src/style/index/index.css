@@ -571,8 +571,15 @@ i {
 	padding: 3px;
 	text-align: center;
 	font: 14px/40px "微软雅黑";
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	background: url("http://p0.so.qhmsg.com/t0102f7dee54b2f2155.jpg")left top/cover;
 }
-
+.IN-summerfoods img{
+	width: 64px;
+	height: 60px;
+}
 
 /*==========*/
 

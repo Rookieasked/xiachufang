@@ -405,9 +405,6 @@ class Index extends Component {
 						<button id="prev" type="button" className="btn btn-default btn-sm">&gt;</button>
 						<button id="next" type="button" className="btn btn-default btn-sm">&lt;</button>
 					</div>
-					
-					
-					
 					<div className="IN-IN-banner-nav-wrap">
 						<div id="imgBox">
 					        <ul id='ul'>
@@ -425,7 +422,7 @@ class Index extends Component {
 					            </li>
 					            <li className='imgBoxLi'>
 					            {
-					            	this.state.data.slice(1,3).map(function(item,i){
+					            	this.state.data.slice(4,7).map(function(item,i){
 					            		return(
 					            			<dl key={i} onClick={athis.bannerroute.bind(athis,item._id)}>
 				            			<dt><img src={item.imgSrc} /></dt>
@@ -437,7 +434,7 @@ class Index extends Component {
 					            </li>
 					            <li className='imgBoxLi'>
 					            {
-					            	this.state.data.slice(2,3).map(function(item,i){
+					            	this.state.data.slice(8,11).map(function(item,i){
 					            		return(
 					            			<dl key={i} onClick={athis.bannerroute.bind(athis,item._id)}>
 				            			<dt><img src={item.imgSrc} /></dt>
@@ -451,20 +448,16 @@ class Index extends Component {
 					        </ul>
 					    </div>
 					</div>
-					
-					
-					
-					
 					<div className="IN-contit">
 						最近流行
 						<span>	全部</span>
 					</div>
 					<div className="IN-hot-wrap">
 					{
-						this.state.data.slice(0,5).map(function(item,i){
+						this.state.data.slice(0,12).map(function(item,i){
 						return (<div key={i} className="IN-hot" onClick={athis.bannerroute.bind(athis,item._id)}>
 								<div className="IN-hot-img">
-									<img src={item.imgSrc}/>
+									<img src={item.imgSrc} alt="待加载"/>
 								</div>
 								<div className="IN-hot-name">
 									{item.tit}
@@ -475,37 +468,6 @@ class Index extends Component {
 							</div>)
 						})
 					}
-					{
-						this.state.data.slice(0,5).map(function(item,i){
-						return (<div key={i} className="IN-hot" onClick={athis.bannerroute.bind(athis,item._id)}>
-								<div className="IN-hot-img">
-									<img src={item.imgSrc}/>
-								</div>
-								<div className="IN-hot-name">
-									{item.tit}
-								</div>
-								<div className="IN-hot-use">
-									{item.user}<span><em> {item.message[0].good} </em>做过</span>
-								</div>
-							</div>)
-						})
-					}
-					{
-						this.state.data.slice(0,2).map(function(item,i){
-						return (<div key={i} className="IN-hot" onClick={athis.bannerroute.bind(athis,item._id)}>
-								<div className="IN-hot-img">	
-									<img src={item.imgSrc}/>
-								</div>
-								<div className="IN-hot-name">
-									{item.tit}
-								</div>
-								<div className="IN-hot-use">
-									{item.user}<span><em> {item.message[0].good} </em>做过</span>
-								</div>
-							</div>)
-						})
-					}
-
 					</div>
 					<div className="IN-contit">
 						时令食材
@@ -513,11 +475,11 @@ class Index extends Component {
 					</div>
 					<div className="IN-summerfood">
 						{
-							this.state.summerfood.map(function(item,i){
+							this.state.data.slice(0,12).map(function(item,i){
 								return (
 									<div key={i}  className="IN-summerfoods" onClick={athis.bannerroute.bind(athis,item._id)}>
-										<img src="http://i1.chuimg.com/e49593d47c9111e5922bb82a72e00100.jpg@2o_50sh_1pr_1l_60w_60h_1c_1e_90q_1wh"/>
-										<span>{item.summerfood}</span>
+										<img src={item.imgSrc} alt="待加载"/>
+										<span>{item.tit}</span>
 									</div>
 								)}
 							)
