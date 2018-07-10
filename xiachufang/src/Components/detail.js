@@ -1,10 +1,10 @@
-import React from 'react'
-import $ from 'jquery'
+import React from 'react';
+import $ from 'jquery';
 import { Layout,Breadcrumb,Avatar,Icon,Input,message, Button } from 'antd';
-import '../style/detail.css'
-import IndexInside from './IndexInside'
-import BackTop from './BackTop'
-// import Store from "./Store";
+import '../style/detail.css';
+import IndexInside from './IndexInside';
+import BackTop from './BackTop';
+import Store from "../store/store";
 
 const {  Sider, Content } = Layout;
 const { TextArea } = Input;
@@ -21,8 +21,13 @@ class Detail extends React.Component{
             foods:[],
             step:[],
             message:[],
-            // user:Store.getState()
+            user:Store.getState()
         }
+        this.onchanges=this.onchanges.bind(this)
+    }
+
+    onchanges(){
+        this.setState({arr:Store.getState()})
     }
 
     collection(id){
@@ -69,6 +74,7 @@ class Detail extends React.Component{
     // }
 
     render(){
+        console.log(this.state.user)
         return(
             <div id='detail'>
                 <BackTop/>
@@ -180,6 +186,8 @@ class Detail extends React.Component{
         })
     }
     componentDidMount(){
+        Store.subscribe(this.onchanges)
+        console.log(this.state.user)
         var _this=this;
         var id = this.props.match.params.id;
         $.ajax({

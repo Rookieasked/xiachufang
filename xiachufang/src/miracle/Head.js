@@ -12,10 +12,15 @@ class Head extends Component {
 	}
 	tap(){
 		window.location.href="/fenleiye"
-//		this.props.history.push('/fenleiye')
 	}
 	header(){
 		window.location.href="/index"
+	}
+	toLogin(){
+        window.location.href='/login'
+	}
+	toReg(){
+        window.location.href='/reg'
 	}
   render() {
     return (
@@ -34,8 +39,8 @@ class Head extends Component {
        					<li>作品动态</li>
        				</ul>
        				<ul className='tou-zcdl'>
-       					<li>注册</li>
-       					<li><span>登录</span></li>
+       					<li onClick={this.toReg}>注册</li>
+       					<li onClick={this.toLogin}><span>登录</span></li>
        				</ul>
        			</div>
        		</div>
