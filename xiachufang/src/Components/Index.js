@@ -184,7 +184,12 @@ class Index extends Component {
 	login(){
 		this.props.history.push("/login")
 	}
-		
+	feilei(){
+		this.props.history.push("/fenleiye")
+	}
+	liebiao(a){
+		window.location.href="/liebiaoye/"+a
+	}
 
 
 	render() {
@@ -218,58 +223,58 @@ class Index extends Component {
 							<i>&gt;</i>
 							<ul className="IN-list IN-listrou">
 								<li>
-									<div className="IN-lei">{this.state.page}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.page}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.pages.slice(0,7).map(function(item,i){
-											return(<span key={i}>{item}</span>)
+											return(<span key={i} onClick={athis.liebiao.bind(athis,item)}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 								<li>
-									<div className="IN-lei">{this.state.chicken}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.chicken}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.chickens.slice(0,7).map(function(item,i){
 											return(<span key={i}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 								<li>
-									<div className="IN-lei">{this.state.beef}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.beef}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.beefs.slice(0,7).map(function(item,i){
 											return(<span key={i}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 								<li>
-									<div className="IN-lei">{this.state.duck}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.duck}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.ducks.slice(0,7).map(function(item,i){
 											return(<span key={i}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 								<li id="IN-bordernon">
-									<div className="IN-lei">{this.state.Lamb}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.Lamb}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.Lambs.slice(0,7).map(function(item,i){
 											return(<span key={i}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 							</ul>
@@ -284,47 +289,47 @@ class Index extends Component {
 							<i>&gt;</i>
 							<ul className="IN-list IN-listcai">
 								<li>
-									<div className="IN-lei">{this.state.page1}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.page1}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.pages1.slice(0,7).map(function(item,i){
 											return(<span key={i}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 								<li>
-									<div className="IN-lei">{this.state.chicken1}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.chicken1}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.chickens1.slice(0,7).map(function(item,i){
 											return(<span key={i}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 								<li>
-									<div className="IN-lei">{this.state.beef1}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.beef1}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.beefs1.slice(0,7).map(function(item,i){
 											return(<span key={i}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 								<li>
-									<div className="IN-lei">{this.state.duck1}</div>
+									<div className="IN-lei" onClick={this.feilei.bind(this)}>{this.state.duck1}</div>
 									<div className="IN-leiinfo">
 										{
 											this.state.ducks1.slice(0,7).map(function(item,i){
 											return(<span key={i}>{item}</span>)
 											})
 										}
-										<span>更多</span>
+										<span onClick={this.feilei.bind(this)}>更多</span>
 									</div>
 								</li>
 							</ul>

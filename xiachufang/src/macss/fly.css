@@ -1,0 +1,67 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.fenlei-wrap{
+	width: 1000px;
+	height: 100%;
+	margin: 90px auto 0;
+}
+.fenlei-wrap>h1{
+	font-size: 34px;
+	line-height: 70px;
+	font-weight: bold;
+}
+.fenlei-con{
+	font-size: 16px;
+	padding: 40px;
+	height: 100%;
+	overflow: hidden;
+	background: #f5f6f5;
+	color: #222222;
+	list-style: none;
+}
+
+.dalei{
+	font-size: 20px;
+	font-weight: bold;
+	width: 170px;
+	height: 36px;
+	line-height: 36px;
+	float: left;
+}
+.xiaolei-wrap{
+	width: 600px;
+	float: left;
+	border-bottom: 1px solid #C0C0C0;
+	margin-bottom: 30px;
+}
+.xiaolei{
+	width: 600px;
+	
+}
+.xiaolei h4{
+	width: 600;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 13px;
+	margin-bottom: 6px;
+	color: #909090;
+}
+.xiaolei ul{
+	width: 100%;
+	margin: 16px 0;
+	overflow: hidden;
+}
+.xiaolei li{
+	color: #222222;
+	width: 105px;
+	height: 32px;
+	padding-left: 14px;
+	line-height: 32px;
+	float: left;
+	cursor: pointer;
+}
+.xiaolei li:hover{
+	color: #dd3915;
+}

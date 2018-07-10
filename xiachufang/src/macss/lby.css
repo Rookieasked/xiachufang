@@ -1,0 +1,276 @@
+#components-layout-demo-top-side .logo {
+  width: 120px;
+  height: 31px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px 28px 16px 0;
+  float: left;
+}
+body{
+	font-size: 16px;
+}
+.lby-con{
+	width: 1000px;
+	margin: 100px auto 0;
+}
+li{
+	list-style: none;
+}
+/*左边栏**********************************/
+.lby-list{
+	width: 155px;
+}
+.lby-list li{
+	height: 28px;
+	margin-bottom: 8px;
+	line-height: 28px;
+	font-size: 16px;
+	color: #222222;
+}
+.lby-list li:hover{
+	color: #dd3915;
+	cursor: pointer;
+}
+.ant-menu-submenu-title:hover{
+	background: #F3F3F3;
+	color: #222;
+}
+.ant-menu-submenu-arrow:hover{
+	color: #222;
+	background: #F3F3F3;
+}
+.ant-menu-item:hover{
+	color:#dd3915 ;
+}
+
+
+/*中间部分***************************/
+figure,figcaption,img,p,li{
+	margin: 0;
+	padding: 0;
+}
+figure{
+	width: 495px;
+	display: flex;
+	margin-bottom: 14px;
+}
+figure img{
+	display: block;
+	width: 215px;
+	height: 136px;
+	background: yellowgreen;
+}
+.lby-leiname{
+	font-size: 34px;
+	font-weight: 900;
+	margin-bottom: 12px;
+}
+.lby-bqian{
+	font-size: 16px;
+	color: #909090;
+	cursor: pointer;
+	margin-bottom: 30px;
+}
+.mid-fig{
+	margin-left: 20px;
+}
+.lby-cm{
+	width: 245px;
+	/*height: 35px;*/
+	word-break: normal;
+	word-wrap: break-word;
+	margin-bottom: 5px;
+	
+}
+.lby-cm>span:nth-child(1){
+	font-size: 20px;
+	font-weight: 900;
+	line-height: 1.4;
+	cursor: pointer;
+	color: #222222;
+}
+.lby-cm>span:nth-child(1):hover{
+	color: #dd3915;
+}
+.lby-cm>span:nth-child(2){
+	display: inline-block;
+	width: 42px;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 10px;
+	background: #F3F3F3;
+	font-size: 10px;
+	color: #555555;
+	text-align: center;
+	cursor: pointer;
+}
+.lby-cl{
+	width: 245px;
+	height: 25px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #9c6730;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.lby-cl:hover{
+	color: #dd3915;
+}
+.lby-pf{
+	color: #909090;
+  font-size: 13px;
+	width: 245px;
+	height: 23px;
+	line-height: 24px;
+}
+.lby-pf span{
+	color: #31B0D5;
+  font-size: 14px;
+	font-weight: bold;
+}
+.lby-zz{
+	color: #909090;
+  font-size: 13px;
+	cursor: pointer;
+	width: 245px;
+	height: 23px;
+	line-height: 24px;
+}
+.lby-zz:hover{
+	color: #dd3915;
+}
+
+/*右边栏******************************/
+.rt-list{
+	width: 300px;
+	background: #FFFFFF;
+	margin-left: 25px;
+}
+.rt-listtit{
+	font-size: 20px;
+	color: #c0ae7d;
+	font-weight: bold;
+	line-height: 50px;
+	overflow: hidden;
+}
+.lby-rtpic{
+	width: 300px;
+	margin-bottom: 18px;
+}
+.lby-rtpic img{
+	width: 150px;
+	height: 100px;
+	background: pink;
+}
+.rt-fig{
+	padding: 0 0 0 10px;
+}
+.lbyr-cm{
+	width: 140px;
+	/*height: 35px;*/
+	word-break: normal;
+	word-wrap: break-word;
+	
+}
+.lbyr-cm>span:nth-child(1){
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.4;
+	cursor: pointer;
+	margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 44px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.lbyr-cm>span:nth-child(1):hover{
+	color: #dd3915;
+}
+.lbyr-cm>span:nth-child(2){
+	display: block;
+	width: 42px;
+	height: 20px;
+	line-height: 20px;
+	margin-left: 4px;
+	background: #F3F3F3;
+	font-size: 10px;
+	color: #555555;
+	text-align: center;
+	cursor: pointer;
+}
+.lbyr-cl{
+	width: 140px;
+	height: 25px;
+	line-height: 24px;
+	font-size: 14px;
+	color: #9c6730;
+	cursor: pointer;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.lbyr-cl:hover{
+	color: #dd3915;
+}
+
+.lbyr-zz{
+	color: #909090;
+  font-size: 13px;
+	cursor: pointer;
+	width: 140px;
+	height: 23px;
+	line-height: 24px;
+}
+.lbyr-zz:hover{
+	color: #dd3915;
+}
+/*右下图*/
+.rt-listtitx{
+	border: 0 none;
+	overflow: hidden;
+}
+.rt-listtitx>div{
+	/*display: inline-block;*/
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	color:#c0ae7d ;
+	float: left;
+	border: none;
+}
+.rt-listtitx>span{
+	color:#dd3915;
+	font-size: 14px;
+	margin-left: 10px;
+	line-height: 50px;
+	float: left;
+}
+.lby-rtxpic{
+	cursor: pointer;
+	border: 1px solid #f3f3f3;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+.lby-rtxpic>img{
+	display: block;
+	width: 300px;
+	height: 140px;
+	background: yellowgreen;
+}
+.rtx-fig{
+	font-size: 16px;
+	line-height: 44px;
+	text-align: center;
+}
+
+
+.rtx-ewm>img{
+	width: 300px;
+	height: 250px;
+	display: block;
+	cursor: pointer;
+}

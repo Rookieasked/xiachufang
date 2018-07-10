@@ -1,0 +1,134 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+.tou-wrap{
+	background: #FFFFFF;
+	height: 70px;
+	border-bottom: 1px solid #f3f3f3;
+	box-shadow: 0 2px 2px -2px rgba(0,0,0,.08);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+}
+.tou{
+	height: 70px;
+	width: 1000px;
+	margin: 0 auto;
+}
+.tou-logo{
+	height: 40px;
+	width: 120px;
+	float: left;
+	margin-top: 16px;
+	cursor: pointer;
+	margin-right: 46px;
+	background: url(../maimg/logo.png)no-repeat;
+}
+.tou-search{
+	width: 380px;
+	height: 44px;
+	float: left;
+	margin-top: 12px;
+}
+.tou-search input{
+	width: 300px;
+	height: 44px;
+	padding: 0 10px;
+	float: left;
+	font-size: 16px;
+	box-sizing: border-box;
+	border: 1px solid #f3f3f3;
+	outline: none;
+}
+.tou-search button{
+	width: 80px;
+	height: 44px;
+	float: left;
+	box-sizing: border-box;
+	border: 0;
+	background: #dd3915;
+	color: #FFFFFF;
+	font-size: 15px;
+	cursor: pointer;
+	z-index: 10;
+}
+.tou-list{
+	width: 304px;
+	height: 28px;
+	padding-top: 8px;
+	float: left;
+	font-size: 16px;
+	margin-top: 20px;
+}
+.tou-list li{
+	float: left;
+	margin-left: 20px;
+	color: #dd3915;
+}
+.tou-list li:hover{
+	color: #FFFFFF;
+	background: #dd3915;
+	cursor: pointer;
+}
+.tou-zcdl{
+	width: 128px;
+	height: 28px;
+	padding-top: 8px;
+	float: right;
+	margin-top: 20px;
+	font-size: 16px;
+	color: #dd3915;
+}
+.tou-zcdl li{
+	float: right;
+}
+.tou-zcdl li:hover{
+	color: #FFFFFF;
+	background: #dd3915;
+	cursor: pointer;
+}
+.tou-zcdl li:nth-child(2){
+	margin-right: 12px;
+}
+
+
+
+
+
+/*二级菜单*/
+.tou-cpfl{
+	position: relative;
+}
+.tou-cpfl:hover .flcp{
+	display: block;
+}
+.flcp{
+	display: none;
+	width: 412px;
+	height: 412px;
+	position: absolute;
+	top: 21px;
+	left: -144px;
+	padding: 16px;
+	box-sizing: content-box;
+}
+.box{
+	width: 380px;
+	height: 380px;
+	background:#F3F3F3;
+}
+.boxs{
+	width: 32%;
+	height: 100%;
+	float: left;
+	padding-top: 24px;
+}
+.boxs li{
+	line-height: 30px;
+}

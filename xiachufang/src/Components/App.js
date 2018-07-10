@@ -7,6 +7,9 @@ import 'antd/dist/antd.css';					//引入antd样式
 import Detail from './detail';
 import Footer from './footer';
 import Index from './Index';
+import Head from '../miracle/Head';
+import Fenlei from '../miracle/fenleiye';
+import Liebiaoye from '../miracle/liebiaoye';
 import ReactDOM from 'react-dom';				//引入react-dom
 import {BrowserRouter as Router,Route,Link,Redirect} from 'react-router-dom';				//需要什么引什么
 
@@ -17,10 +20,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+      	<Head/>
           <Router>
               <div>
                   <Route path="/detail/:id" component={Detail}/>
                   <Route path="/index" component={Index}/>
+					<Route path="/fenleiye"  component={Fenlei}></Route>
+					<Route path="/liebiaoye/:id" component={Liebiaoye}></Route>
               </div>
           </Router>
           <Footer/>
